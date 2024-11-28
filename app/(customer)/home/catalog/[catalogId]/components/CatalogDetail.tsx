@@ -15,7 +15,7 @@ const CatalogDetail = () => {
             <div>
               <img
                 src={`https://img.freepik.com/free-vector/flat-design-wedding-digital-invitation_23-2149949327.jpg?t=st=1732677698~exp=1732681298~hmac=a36922537f5b6d1edb2e91b4e7a4548e416763fd13d0d1724238527722eba0e1&w=740`}
-                className={`mx-auto w-[300px] md:w-[450px] md:h-[300px] object-contain rounded-lg transition-transform duration-300`}
+                className={`mx-auto w-[300px] md:w-[550px] md:h-[400px] object-contain rounded-lg transition-transform duration-300`}
               />
             </div>
           </div>

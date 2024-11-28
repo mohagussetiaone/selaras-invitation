@@ -10,6 +10,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari dan Chrome */
+}
+
 @layer base {
   :root {
     --background: 39 100% 97%;

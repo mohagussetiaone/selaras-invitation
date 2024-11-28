@@ -3,6 +3,7 @@
 import Banner from "./components/Banner";
 import Catalog from "./components/Catalog";
 import Category from "./components/Category";
+import Instruction from "./components/Instruction";
 import Testimonials from "./components/Testimonial";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <Banner />
       <Category />
       <Catalog />
+      <Instruction />
       <Testimonials />
     </section>
   );

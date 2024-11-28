@@ -5,6 +5,7 @@ import React, { useState, Fragment } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export const Card = React.memo(({ card, index, hovered, setHovered }: { card: any; index: number; hovered: number | null; setHovered: React.Dispatch<React.SetStateAction<number | null>> }) => (
   <div
@@ -15,6 +16,9 @@ export const Card = React.memo(({ card, index, hovered, setHovered }: { card: an
     <Image src={card.src} alt={card.title} fill className="object-cover absolute inset-0" />
     <div className={cn("absolute inset-0  flex items-end py-8 px-4 transition-opacity duration-300", hovered === index ? "opacity-100 bg-black/10" : "opacity-0 bg-black/50")}>
       <div className="text-xl md:text-2xl font-medium text-primary">{card.title}</div>
+      <Link href={card.linkTemplate} className="ml-4 -mt-4">
+        <SquareArrowOutUpRight className="w-6 h-6 text-primary " />
+      </Link>
     </div>
   </div>
 ));
@@ -24,6 +28,7 @@ Card.displayName = "Card";
 type Card = {
   title: string;
   src: string;
+  linkTemplate: string;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {

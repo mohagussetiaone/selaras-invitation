@@ -1,5 +1,6 @@
 import React from "react";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
+import HeaderContent from "../../components/HeaderContent";
 
 const Album: React.FC = () => {
   const images = [
@@ -27,8 +28,14 @@ const Album: React.FC = () => {
   ];
 
   return (
-    <section className="py-20" id="album">
-      <ParallaxScroll images={images} />;
+    <section id="album">
+      <div className="sticky top-0 z-10 mx-auto text-center">
+        <HeaderContent buttonText="Album" titleContent="Album Pelanggan Setia" descriptionContent="Kumpulan momen berharga dari pelanggan kami yang telah mempercayai kami!" />
+
+        <div>
+          <ParallaxScroll images={images} />
+        </div>
+      </div>
     </section>
   );
 };

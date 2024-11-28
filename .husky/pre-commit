@@ -1,1 +1,1 @@
-npx husky add .husky/pre-commit "npm run format"
+echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg

@@ -27,8 +27,8 @@ const benefits = [
 
 const Category = () => {
   return (
-    <section className="py-20">
-      <div className="w-full mx-auto bg-[#F2E8E7]">
+    <section>
+      <div className="w-full mx-auto bg-[#F2E8E7] px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto py-20 text-start">
           {benefits.map((benefit, index) => (
             <div key={index}>

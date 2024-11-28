@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 mx-auto z-[100] border-b border-primary bg-background px-2">
+      <nav className="sticky top-0 mx-auto z-[100] border-b border-primary bg-background">
         <div className="flex max-w-6xl mx-auto items-center justify-between py-2">
           <Link href="/" className="flex items-center">
             <Image width={60} height={60} src={Logo} alt="logo" />

@@ -39,7 +39,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }: { testi
   };
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12">
+    <div className="max-w-3xl md:max-w-4xl mx-auto antialiased font-sans px-4">
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
         <div>
           <div className="relative h-80 w-full">
@@ -58,7 +58,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }: { testi
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
                     rotate: isActive(index) ? 0 : randomRotateY(),
-                    zIndex: isActive(index) ? 999 : testimonials.length + 2 - index,
+                    zIndex: isActive(index) ? 9 : testimonials.length + 2 - index,
                     y: isActive(index) ? [0, -80, 0] : 0,
                   }}
                   exit={{

@@ -12,8 +12,8 @@ const HeaderContent: React.FC<HeaderContentProps> = ({ buttonText, titleContent,
   const words = ["Momen tak terlupakan dengan undangan online yang unik", "Jadikan acara spesial Anda lebih berkesan", "Undangan online sempurna untuk momen yang tak terlupakan"];
 
   return (
-    <section className="py-8">
-      <div className="flex flex-col justify-center mb-14">
+    <section className="py-14">
+      <div className="flex flex-col justify-center">
         <span className="inline-block whitespace-nowrap mx-auto bg-primary/10 px-4 py-2 text-primary text-center rounded">{buttonText}</span>
         <div className="relative flex items-center justify-center my-4">
           {/* Garis Horizontal */}

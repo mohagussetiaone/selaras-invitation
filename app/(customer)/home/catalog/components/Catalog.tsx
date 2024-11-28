@@ -210,7 +210,7 @@ const CardComponent: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-2">
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="max-w-5xl w-full mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {invitationData.map((card) => (
           <div key={card.id} className="relative flex flex-col text-gray-700 bg-white bg-clip-border rounded-md hover:shadow-md cursor-pointer" onClick={() => router.push(`/home/catalog/${card.id}`)}>
             {/* Gambar Undangan */}

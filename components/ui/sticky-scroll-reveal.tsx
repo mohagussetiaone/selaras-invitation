@@ -29,22 +29,27 @@ export const StickyScroll = ({
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("scrollYProgress:", latest);
+
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
       const distance = Math.abs(latest - breakpoint);
-      if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+      if (distance < Math.abs(latest - cardsBreakpoints[acc]) || latest >= 1) {
         return index;
       }
       return acc;
     }, 0);
+
+    console.log("closestBreakpointIndex:", closestBreakpointIndex);
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = ["var(--background)", "var(--background)", "var(--background)"];
+  const backgroundColors = ["var(--background)", "var(--background)", "var(--background)", "var(--background)"];
   const images = [
-    "https://img.freepik.com/premium-photo/wedding-invitation-phone_1029473-748930.jpg?w=900", // First image
+    "https://img.freepik.com/premium-photo/wedding-invitation-phone_1029473-748930.jpg?w=900",
     "https://img.freepik.com/free-vector/wedding-rsvp-card_23-2147967734.jpg?t=st=1732788385~exp=1732791985~hmac=bfc7017d89280e93de5ffa12594056dd706927419bf7d1d3dea9646a269fe4eb&w=740",
     "https://img.freepik.com/free-vector/wedding-menu-template_23-2148046554.jpg?t=st=1732788396~exp=1732791996~hmac=36238cf5d8bf52aabaa492889197ad2f8dc36162bff1a78d3b2daef31b158223&w=740",
+    "https://img.freepik.com/free-vector/boho-frame-wedding-card-template_23-2149268489.jpg?t=st=1732802929~exp=1732806529~hmac=78a85abc538e22a573320d3b2c83f10a38a45145dfe690f07281676218962080&w=740",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(images[0]);
@@ -62,7 +67,7 @@ export const StickyScroll = ({
       ref={ref}
     >
       <div className="div relative flex items-start md:px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-sm px-4">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2

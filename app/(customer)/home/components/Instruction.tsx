@@ -35,7 +35,7 @@ const content = [
 const Instruction = () => {
   return (
     <div>
-      <HeaderContent titleContent="Panduan Pemesanan Undangan Online" buttonText="Mulai Sekarang" descriptionContent="Ikuti langkah mudah berikut untuk memesan undangan online Anda dengan cepat dan praktis." />
+      <HeaderContent titleContent="Panduan Pemesanan" buttonText="Mulai Sekarang" descriptionContent="Ikuti langkah mudah berikut untuk memesan undangan online Anda dengan cepat dan praktis." />
       <StickyScroll content={content} />
     </div>
   );

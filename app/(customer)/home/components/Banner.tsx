@@ -19,10 +19,10 @@ const Banner: React.FC = () => {
           height: "100vh",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto h-full px-4">
           <div className="flex gap-2 flex-col justify-center items-start h-full">
-            <h1 className="text-5xl font-bold text-black whitespace-normal md:whitespace-nowrap">Bagikan momen spesial </h1>
-            <h1 className="text-3xl font-bold whitespace-normal md:whitespace-nowrap">
+            <h1 className="text-4xl md:text-5xl font-bold text-black whitespace-normal md:whitespace-nowrap">Bagikan momen spesial </h1>
+            <h1 className="text-2xl md:text-3xl font-bold whitespace-normal md:whitespace-nowrap">
               <span className="text-black">dari </span>
               <span className="text-primary">Selaras Invitation</span>
             </h1>

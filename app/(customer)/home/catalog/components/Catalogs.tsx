@@ -144,10 +144,10 @@ const Example: React.FC = () => {
           </div>
         </Dialog>
 
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="sticky bg-background top-16 z-10 flex items-baseline justify-between border-b border-gray-200 py-8">
+        <main className="mx-auto max-w-6xl">
+          <div className="sticky bg-background top-16 z-10 flex gap-4 flex-col md:flex-row items-baseline md:justify-between border-b border-gray-200 py-8 px-2">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
-            <div className="flex items-center">
+            <div className="flex justify-end items-end md:items-center">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <MenuButton className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">

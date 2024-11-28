@@ -37,7 +37,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
   return (
     <Fragment>
       <div className="max-w-5xl md:px-8 mx-auto">
-        <div className="flex justify-between items-center pb-8">
+        <div className="flex justify-between items-center pb-8 pl-4">
           <div>
             <h1 className="text-xl md:text-2xl">Katalog Popular</h1>
           </div>
@@ -45,7 +45,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
             <Button variant="link">Lihat Semua</Button>
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto  w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto px-4 w-full">
           {cards.map((card, index) => (
             <Card key={card.title} card={card} index={index} hovered={hovered} setHovered={setHovered} />
           ))}

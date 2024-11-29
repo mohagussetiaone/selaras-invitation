@@ -1,51 +1,57 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Routes from "./Routes";
 import Image from "next/image";
-import Logo from "@/app/assets/images/logo/logo.png";
-import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-// import ModalNavbar from "./ModalNavbar";
+import { Button } from "@/components/ui/button";
+import Logo from "@/app/assets/images/logo/logo.png";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const baseHref = "/home";
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const handleViewportChange = (event: MediaQueryListEvent | MediaQueryList) => {
+      if (event.matches) {
+        setIsOpen(false);
+      }
+    };
+    handleViewportChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleViewportChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleViewportChange);
+    };
+  }, []);
 
   return (
     <>
       <nav className="sticky top-0 mx-auto z-[100] border-b border-primary bg-background">
-        <div className="flex max-w-6xl mx-auto items-center justify-between py-2">
+        <div className="flex max-w-6xl mx-auto items-center justify-between p-2 md:px-0">
           <Link href="/" className="flex items-center">
             <Image width={60} height={60} src={Logo} alt="logo" />
           </Link>
           <div className="hidden md:flex items-center gap-6">
-            <ul className="md:flex text-sm items-center gap-4 mr-5 font-semibold text-text">
-              <li>
-                <Link href={`${baseHref}`}>Home</Link>
-              </li>
-              <li>
-                <Link href={`/home/catalog`}>Katalog</Link>
-              </li>
-              <li>
-                <Link href="/home/album">Album</Link>
-              </li>
-              <li>
-                <Link href={`${baseHref}#testimonial`}>Testimoni</Link>
-              </li>
-              <li>
-                <Link href={`/home/about`}>Tentang Kami</Link>
-              </li>
-            </ul>
+            <Routes onNavigate={() => setIsOpen(false)} />
           </div>
           <div className="hidden md:flex">
-            <Link href="/contact">
+            <Link href="/home/contact">
               <Button>Contact</Button>
             </Link>
           </div>
-          <div className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-            <Menu className="w-8 h-8" />
-          </div>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Menu className="w-8 h-8 md:hidden" />
+            </SheetTrigger>
+            <SheetContent className="md:hidden p-4 z-[999]">
+              <SheetHeader>
+                <SheetTitle className="flex mb-4">All Menu</SheetTitle>
+                <Routes onNavigate={() => setIsOpen(false)} />
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
     </>

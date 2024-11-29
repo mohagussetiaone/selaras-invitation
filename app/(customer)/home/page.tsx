@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import Catalog from "./components/Catalog";
 import Category from "./components/Category";
 import Instruction from "./components/Instruction";
+import About from "./components/About";
 import Testimonials from "./components/Testimonial";
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
       <Category />
       <Catalog />
       <Instruction />
+      <About />
       <Testimonials />
     </section>
   );

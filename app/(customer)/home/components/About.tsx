@@ -3,10 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeaderContent from "./HeaderContent";
 
 const About: React.FC = () => {
   return (
     <section className="w-full py-8 relative" id="about">
+      <HeaderContent titleContent="Tentang Kami" buttonText="Selengkapnya" descriptionContent="Profesional dan terpercaya sebagai penyedia layanan undangan online terbaik di Indonesia." />
       <div className="w-full max-w-6xl mx-auto px-4 md:px-5 lg:px-5">
         <div className="w-full justify-start items-center grid lg:grid-cols-2 grid-cols-1 md:gap-10">
           <div className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">

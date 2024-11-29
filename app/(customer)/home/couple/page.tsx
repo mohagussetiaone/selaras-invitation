@@ -1,8 +1,8 @@
 import React from "react";
-import About from "./components/About";
+import Couple from "./components/Couple";
 
 const page = () => {
-  return <About />;
+  return <Couple />;
 };
 
 export default page;

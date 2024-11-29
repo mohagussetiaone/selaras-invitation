@@ -15,9 +15,11 @@
     ]
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
     "@commitlint/cli": "18.0.0",
     "@commitlint/config-conventional": "18.0.0",
+    "@headlessui/react": "^2.2.0",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.22.0",
     "axios": "^1.7.7",

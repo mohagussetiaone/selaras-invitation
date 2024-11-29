@@ -2,6 +2,7 @@ import React from "react";
 import LogoWatermark from "@/app/assets/images/logo/logowatermark.png";
 import Image from "next/image";
 import { Twitter, Facebook, Phone } from "lucide-react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -27,25 +28,20 @@ const Footer: React.FC = () => {
               <div className="w-full lg:w-4/12 ml-auto">
                 <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Event Information</span>
                 <ul className="list-unstyled">
-                  <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#about">
-                      About the Event
-                    </a>
-                  </li>
-                  <li>
+                  {/* <li>
                     <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#schedule">
-                      Event Schedule
+                      Wedding Schedule
                     </a>
+                  </li> */}
+                  <li>
+                    <Link href="/home/couple" className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm">
+                      Blogs
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#speakers">
-                      Speakers
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#registration">
-                      Register Now
-                    </a>
+                    <Link href="/home/catalog" className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm">
+                      RSVP Now
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -53,24 +49,19 @@ const Footer: React.FC = () => {
                 <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Contact & Support</span>
                 <ul className="list-unstyled">
                   <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#faq">
+                    <Link href="/home/faq" className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm">
                       FAQs
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#contact">
+                    <Link href="/home/contact" className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#terms">
-                      Terms & Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm" href="#privacy">
-                      Privacy Policy
-                    </a>
+                    <Link href="/home/terms" className="text-blueGray-600 hover:text-blueGray-800 font-normal block pb-2 text-sm">
+                      Terms & Privacy
+                    </Link>
                   </li>
                 </ul>
               </div>
